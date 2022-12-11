@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雪花极简浏览器主题</title>
+  <link rel="stylesheet" href="./search-icon/iconfont.css">
+  <link rel="stylesheet" href="../snow/snow.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      /* background-color: #f5f5f5; */
+    }
+
+    input {
+      margin: 0;
+      padding: 0;
+    }
+
+    .search-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 40px;
+      border-radius: 40px;
+      background-color: #2f3640;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    .search-box>form {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .search-box>form>.serach {
+      border: none;
+      outline: none;
+      background: none;
+      line-height: 40px;
+      width: 0px;
+      text-indent: 25px;
+      letter-spacing: 3px;
+      font-size: 16px;
+      color: #eeeeee;
+      background-color: #2f3640;
+      transition: all .4s ease;
+    }
+/* 
+    .blur {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      z-index: 0;
+      transition: all .4s ease;
+    } */
+
+    .search-box:hover>form>.serach,
+    .search-box>form>.serach:focus {
+      width: 600px;
+    }
+
+    /* .search-box:hover+.blur,
+    .search-box>form>.serach:focus{
+      backdrop-filter: blur(4px);
+    } */
+
+    .search-box>form>.search-icon {
+      position: relative;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      vertical-align: top;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      font-weight: 700;
+      border-radius: 50%;
+      color: #fff;
+    }
+
+    .search-box>form>.search-icon>input {
+      position: absolute;
+      background: transparent;
+      border: none;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .search-box>form>.search-icon>input:hover {
+      cursor: pointer;
+    }
+
+    .search-box:hover>form>.search-icon,
+    .search-box>form>.serach:focus+.search-icon {
+      color: #2f3640;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="search-box">
+    <form action="https://cn.bing.com/search">
+      <input class="serach" type="text" name="q" placeholder="请输入你要搜索的内容">
+
+      <!-- <i class="iconfont icon-sousuo search-icon"></i> -->
+      <div class="search-icon">
+        <input type="submit" value="">
+        <i class="iconfont icon-sousuo"></i>
+      </div>
+    </form>
+  </div>
+  <!-- <div class="blur"></div> -->
+  <div class="snow"></div>
+</body>
+
+</html>

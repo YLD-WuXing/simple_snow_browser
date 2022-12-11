@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #111;
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(800px);
+  }
+}
+
+.snow,
+.snow::after,
+.snow::before {
+  content: "";
+  background:
+    radial-gradient(1px 2px at 270px 470px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(2px 3px at 100px 50px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 200px 150px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(4px 5px at 300px 80px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 400px 130px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(1px 1px at 350px 170px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(2px 2px at 540px 480px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 50px 50px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(4px 5px at 120px 70px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 320px 500px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(1px 1px at 350px 170px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(2px 2px at 650px 350px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 70px 150px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(4px 5px at 220px 70px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(1px 1px at 210px 110px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(2px 2px at 560px 530px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 700px 120px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(4px 5px at 340px 570px, #fff 0, transparent 70%, transparent 100%),
+    radial-gradient(3px 4px at 120px 520px, #fff 0, transparent 70%, transparent 100%);
+  background-size: 800px 800px;
+  position: absolute;
+  animation: drop 7s linear infinite 1s;
+  top: -800px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.snow::after {
+  margin: 120px;
+  margin-top: 300px;
+  opacity: 0.6;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.snow::before {
+  margin: -304px;
+  opacity: 0.8;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
